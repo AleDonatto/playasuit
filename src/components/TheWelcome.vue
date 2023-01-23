@@ -1,86 +1,65 @@
+<template>
+  <main-template>
+    <template v-slot:content>
+      <div class="">
+        <v-card>
+          <v-carousel hide-delimiters>
+            <v-carousel-item
+              src="https://upload.wikimedia.org/wikipedia/commons/9/96/Barbados_beach.jpg"
+              cover
+            ></v-carousel-item>
+
+            <v-carousel-item
+              src="https://mindfultravelbysara.com/wp-content/uploads/2021/11/playas-ma%CC%81s-bonitas-de-Me%CC%81xico.jpg"
+              cover
+            ></v-carousel-item>
+
+            <v-carousel-item
+              src="http://c.files.bbci.co.uk/169A5/production/_111118529_gettyimages-1125074301.jpg"
+              cover
+            ></v-carousel-item>
+          </v-carousel>
+        </v-card>
+
+        <div class="mt-16">
+          <v-row justify="center">
+            <v-col cols="12" align="center">
+              <h1 class="text-center">Bienvenido a Playa Suit Acapulco</h1>
+              <p class="text-body-1 mt-5 text-green font-weight-bold">Busca y reserva la habitaciones que necesites</p>
+            </v-col>
+          </v-row>
+        </div>
+      </div>
+
+      <form-reservation></form-reservation>
+
+      <div class="mt-5 mb-16">
+        <v-row>
+          <v-col cols="5">
+            <v-img src="https://b2b2c.cdnpt.com/playa-suites/images/foto-bahia.jpg" max-height="350"></v-img>
+          </v-col>
+          <v-col cols="6" align-self="center" align="start">
+            <h1 class="text-green text.h5">
+              Vive la mejor experiencia solo en playa suit acapulco
+            </h1>
+            <p class="text-body-1">
+              Hotel en Acapulco ubicado justo en el centro de la Bahía. Sus dos espectaculares torres de 18 pisos ofrecen 488 habitaciones con balcón privado y una increíble vista a la Bahía, 2 restaurantes y 3 bares para satisfacer tus necesidades culinarias.
+            </p>
+          </v-col>
+        </v-row>
+      </div>
+
+    </template>
+  </main-template>
+</template>
+
 <script setup>
-import WelcomeItem from './WelcomeItem.vue'
-import DocumentationIcon from './icons/IconDocumentation.vue'
-import ToolingIcon from './icons/IconTooling.vue'
-import EcosystemIcon from './icons/IconEcosystem.vue'
-import CommunityIcon from './icons/IconCommunity.vue'
-import SupportIcon from './icons/IconSupport.vue'
+import MainTemplate from './layout/MainTemplate.vue';
+import FormReservation from './FormReservation.vue'
 </script>
 
-<template>
-  <WelcomeItem>
-    <template #icon>
-      <DocumentationIcon />
-    </template>
-    <template #heading>Documentation</template>
-
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <ToolingIcon />
-    </template>
-    <template #heading>Tooling</template>
-
-    This project is served and bundled with
-    <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>. The
-    recommended IDE setup is
-    <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a> +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a>. If
-    you need to test your components and web pages, check out
-    <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a> and
-    <a href="https://on.cypress.io/component" target="_blank">Cypress Component Testing</a>.
-
-    <br />
-
-    More instructions are available in <code>README.md</code>.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <EcosystemIcon />
-    </template>
-    <template #heading>Ecosystem</template>
-
-    Get official tools and libraries for your project:
-    <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-    <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
-    <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Vue Test Utils</a>, and
-    <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">Vue Dev Tools</a>. If
-    you need more resources, we suggest paying
-    <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a>
-    a visit.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <CommunityIcon />
-    </template>
-    <template #heading>Community</template>
-
-    Got stuck? Ask your question on
-    <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>, our official
-    Discord server, or
-    <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener"
-      >StackOverflow</a
-    >. You should also subscribe to
-    <a href="https://news.vuejs.org" target="_blank" rel="noopener">our mailing list</a> and follow
-    the official
-    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-    twitter account for latest news in the Vue world.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <SupportIcon />
-    </template>
-    <template #heading>Support Vue</template>
-
-    As an independent project, Vue relies on community backing for its sustainability. You can help
-    us by
-    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
-  </WelcomeItem>
-</template>
+<style scoped>
+.bg-color-appbar{
+  background-color:#524658 ;
+}
+</style>
